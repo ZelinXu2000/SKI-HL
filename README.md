@@ -1,6 +1,6 @@
 # [SIGSPATIAL '23] Spatial Knowledge-Infused Hierarchical Learning: An Application in Flood Mapping on Earth Imagery 
 This repository is the official implementation of the paper: 
-> **Spatial Knowledge-Infused Hierarchical Learning: An Application in Flood Mapping on Earth Imagery**
+> **Spatial Knowledge-Infused Hierarchical Learning: An Application in Flood Mapping on Earth Imagery** <br>
 > Zelin Xu, Tingsong Xiao, Wenchong He, Yu Wang, Zhe Jiang
 
 ## Preparation
