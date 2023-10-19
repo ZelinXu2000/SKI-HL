@@ -10,7 +10,7 @@ This repository is the official implementation of the paper:
 - PyTorch 1.13.1
 - CUDA 11.6
 ### Datasets
-The following datasets need to be downloaded for training from [Google Drive](https://drive.google.com/drive/folders/1-lIMF7hMO6NZ80jhLzWi4jWPEg4l58fy). Please put them in the `/data` folder.
+The following datasets need to be downloaded for training from [Google Drive](https://drive.google.com/drive/folders/1jytlsS9yEdcPpOgSIGqOeM1ZlxvhqnBl?usp=sharing). Please put them in the `/data` folder.
 
 ## Citation
 Please cite our paper if you find this code useful for your work:
