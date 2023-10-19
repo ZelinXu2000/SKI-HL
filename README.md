@@ -19,4 +19,4 @@ TBD
 ```
 
 ## Acknowledgement
-The codes are based on [U-Net](https://github.com/milesial/Pytorch-UNet). Thanks for the awesome open-source code!!
+The codes are based on [U-Net](https://github.com/milesial/Pytorch-UNet) and [Geographical Hidden Markov Tree](https://github.com/spatialdatasciencegroup/HMTFIST). Thanks for the awesome open-source code!!
