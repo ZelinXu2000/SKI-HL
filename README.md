@@ -22,7 +22,12 @@ python main.py --device YOUR_DEVICE --dataset 1
 ## Citation
 Please cite our paper if you find this code useful for your work:
 ```
-TBD
+@inproceedings{xu2023spatial,
+  title={Spatial Knowledge-Infused Hierarchical Learning: An Application in Flood Mapping on Earth Imagery},
+  author={Xu, Zelin and Xiao, Tingsong and He, Wenchong and Wang, Yu and Jiang, Zhe},
+  booktitle={The 31st ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems},
+  year={2023},
+}
 ```
 
 ## Acknowledgement
