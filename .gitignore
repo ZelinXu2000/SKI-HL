@@ -11,4 +11,5 @@ data/
 # log
 log/
 
-#
+# output
+output/
