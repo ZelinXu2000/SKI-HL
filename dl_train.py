@@ -63,7 +63,6 @@ def train_model(
 		epoch_loss = 0
 
 		num_train_batches = len(train_loader)
-		acc = 0
 		with tqdm(total=len(train_set), desc=f'Epoch {epoch}/{epochs}', unit='img') as pbar:
 			for batch in train_loader:
 				images, true_masks = batch['image'], batch['mask']
@@ -74,10 +73,6 @@ def train_model(
 					masks_pred = model(images)
 					masks_pred = pooling(masks_pred)
 					loss = criterion(masks_pred, true_masks.float())
-
-					true_masks = (true_masks > 0.5).float()
-					masks_pred = (masks_pred > 0.5).float()
-					acc += torch.sum(masks_pred == true_masks) / torch.numel(masks_pred)
 
 				optimizer.zero_grad(set_to_none=True)
 				grad_scaler.scale(loss).backward()
@@ -92,17 +87,15 @@ def train_model(
 
 		epoch_loss = epoch_loss / num_train_batches
 		scheduler.step(epoch_loss)
-		acc = acc / num_train_batches
 
-		logging.info('Epoch %d: Training Loss %f, Training Acc %f' % (epoch, epoch_loss, acc))
-		print('Epoch %d: Training Loss %f, Training Acc %f' % (epoch, epoch_loss, acc))
+		logging.info('Epoch %d: Training Loss %f' % (epoch, epoch_loss))
+		print('Epoch %d: Training Loss %f' % (epoch, epoch_loss))
 		logging.info('Current learning rate: {}'.format(scheduler._last_lr))
 
 		# evaluate
 		model.eval()
 		epoch_loss = 0
 		num_valid_batches = len(valid_loader)
-		acc = 0
 		for batch in valid_loader:
 			images, true_masks = batch['image'], batch['mask']
 
@@ -114,16 +107,11 @@ def train_model(
 				masks_pred = pooling(masks_pred)
 				loss = criterion(masks_pred, true_masks.float())
 
-				true_masks = (true_masks > 0.5).float()
-				masks_pred = (masks_pred > 0.5).float()
-				acc += torch.sum(masks_pred == true_masks) / torch.numel(masks_pred)
-
 			epoch_loss += loss.item()
 
 		epoch_loss = epoch_loss / num_valid_batches
-		acc = acc / num_valid_batches
-		logging.info('Epoch %d: Validation Loss %f, Validation Acc %f' % (epoch, epoch_loss, acc))
-		print('Epoch %d: Validation Loss %f, Validation Acc %f' % (epoch, epoch_loss, acc))
+		logging.info('Epoch %d: Validation Loss %f' % (epoch, epoch_loss))
+		print('Epoch %d: Validation Loss %f' % (epoch, epoch_loss))
 
 		early_stop(epoch_loss)
 		if early_stop.early_stop:
