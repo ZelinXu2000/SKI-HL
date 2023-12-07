@@ -4,6 +4,7 @@ This repository is the official implementation of the paper:
 > Zelin Xu<sup>1</sup>, Tingsong Xiao<sup>1</sup>, Wenchong He<sup>1</sup>, Yu Wang<sup>2</sup>, Zhe Jiang<sup>1</sup> <br>
 > <sup>1</sup> *Department of Computer & Information Science & Engineering, University of Florida* <br>
 > <sup>2</sup> *Department of Mechanical & Aerospace Engineering, University of Florida*
+> in SIGSPATIAL 2023 (**Best Paper Award**)
 
 ## Preparation
 ### Dependencies
