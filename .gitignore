@@ -1,0 +1,15 @@
+# PyCharm
+.idea/
+
+# cache
+__pycache__/
+
+# data
+data/
+
+
+# log
+log/
+
+# output
+output/
