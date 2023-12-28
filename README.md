@@ -25,10 +25,11 @@ python main.py --device YOUR_DEVICE --dataset 1
 Please cite our paper if you find this code useful for your work:
 ```
 @inproceedings{xu2023spatial,
-  title={Spatial Knowledge-Infused Hierarchical Learning: An Application in Flood Mapping on Earth Imagery},
+  title={Spatial knowledge-infused hierarchical learning: An application in flood mapping on earth imagery},
   author={Xu, Zelin and Xiao, Tingsong and He, Wenchong and Wang, Yu and Jiang, Zhe},
-  booktitle={The 31st ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems},
-  year={2023},
+  booktitle={Proceedings of the 31st ACM International Conference on Advances in Geographic Information Systems},
+  pages={1--10},
+  year={2023}
 }
 ```
 
